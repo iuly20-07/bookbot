@@ -1,8 +1,10 @@
 def count_letters(text):
-    from library import characters
+    characters = {}
     text = text.lower()
     for char in text:
-        if char in characters:
+        if char not in characters:
+            characters[char] = 1
+        else:
             characters[char] += 1
     return characters
         
