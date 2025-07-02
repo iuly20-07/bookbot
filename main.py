@@ -14,10 +14,9 @@ def letter_report(text):
 def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
-    words = file_contents.split()
-    word_count = len(words)
+    from stats import num_words 
     print("--- Begin report of books/frankenstein.txt ---")
-    print(f"{word_count} words found in the document")
+    num_words(file_contents)   
     print()
     letter_report(file_contents)
     print("--- End report ---")
